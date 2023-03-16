@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>asincronia</h1>
+    <script>
+        // function cuadrado(value, callback) {
+        //     setTimeout(() => {
+        //         callback(value, value * value)
+        //     }, 0 | Math.random() * 100);
+
+
+        // }
+        // cuadrado(0, (value, result) => {
+        //     console.log("Inicia callback");
+        //     console.log(`Callback: ${value}, ${result}`);
+
+        //     cuadrado(1, (value, result) => {
+        //         console.log(`Callback: ${value}, ${result}`);
+        //         cuadrado(2, (value, result) => {
+        //             console.log(`Callback: ${value}, ${result}`);
+        //             cuadrado(3, (value, result) => {
+        //                 console.log(`Callback: ${value}, ${result}`);
+        //                 cuadrado(4, (value, result) => {
+        //                     console.log(`Callback: ${value}, ${result}`);
+
+        //                     cuadrado(5, (value, result) => {
+        //                         console.log(`Callback: ${value}, ${result}`);
+
+        //                     });
+        //                 });
+        //             });
+        //         });
+        //     });
+        // });
+
+
+        function cuadradoPromise(value) {
+            if (typeof value !== "number")
+            { return Promise.reject
+            (`Error, el valor ${value} ingresado no es un número`);
+            }
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                 resolve({
+                    value,
+                    result: value * value
+                 });
+                 
+             }, 0 | Math.random() * 100);
+            })
+
+         }
+         cuadradoPromise("0")
+         .then((obj) => {
+          console.log("Inicia Promise");
+          console.log(`Promise: ${obj.value}, ${obj.result}`);
+          return cuadradoPromise(1)
+        })
+        .then(obj  => {
+         
+          console.log(`Promise: ${obj.value}, ${obj.result}`);
+          return cuadradoPromise(2)
+        })
+        .then(obj  => {
+         
+         console.log(`Promise: ${obj.value}, ${obj.result}`);
+         return cuadradoPromise(3)
+       })
+       .then(obj  => {
+         
+         console.log(`Promise: ${obj.value}, ${obj.result}`);
+         return cuadradoPromise(4)
+       })
+       .then(obj  => {
+         
+         console.log(`Promise: ${obj.value}, ${obj.result}`);
+         return cuadradoPromise(5)
+       })
+       .then(obj  => {
+         
+         console.log(`Promise: ${obj.value}, ${obj.result}`);
+        console.log("FIn de la promesa");
+       })
+         .catch(err => console.error(err));
+    </script>
+</body>
+
+</html>
