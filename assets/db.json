@@ -1,0 +1,61 @@
+{
+  "guerrerosZ": [
+    {
+      "id": 1,
+      "nombre": "Son Goku",
+      "raza": "Sayayin"
+    },
+    {
+      "id": 2,
+      "nombre": "Vegueta",
+      "raza": "Sayayin"
+    },
+    {
+      "id": 3,
+      "nombre": "Krilin",
+      "raza": "Terrícola"
+    },
+    {
+      "id": 4,
+      "nombre": "Kamisama",
+      "raza": "namekuseijin"
+    },
+    {
+      "id": 5,
+      "nombre": "Bulma",
+      "raza": "Terrícola"
+    }
+  ],
+  "Dioses": [
+    {
+      "id": 1,
+      "nombre": "Bills",
+      "de": "Dios de la destrucción"
+    },
+    {
+      "id": 2,
+      "nombre": "Zeno Sama",
+      "de": "Dios Supremo"
+    },
+    {
+      "id": 3,
+      "nombre": "Milk",
+      "de": "Terrícola"
+    },
+    {
+      "id": 4,
+      "nombre": "Kamisama",
+      "de": "Dios de la tierra"
+    },
+    {
+      "id": 5,
+      "nombre": "Vermouth",
+      "de": "Dios de la destrucción universo 11"
+    },
+    {
+      "id": 6,
+      "nombre": "Champa",
+      "de": "Dios de la destrucción universo 6"
+    }
+  ]
+}
